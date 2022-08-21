@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Wedding List App</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="week12.css">
+</head>
+<body>
+
+    <div class="app">
+        <h1 class="mb-3" style="text-align:center; color:rgb(255, 255, 255); text-shadow: #7d7c7c 2px 2px;">My Wedding List</h1>
+     
+        <!--New guest bar -->
+        <div id="addNew" data-bs-toggle="modal" data-bs-target="#form">
+            <span style="color:rgb(236, 230, 230);">Add New Guest</span>
+            <i class="fas fa-plus"></i>
+        </div>
+    
+        <!--  Modal -->
+        <form class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add New Guest</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Guest</h3>
+                        <input type="text" class="form-control" name="" id="textInput">
+                        <div id="msg"></div>
+                        <br>
+                        <h3>Date RVSP</h3>
+                        <input type="date" class="form-control" name="" id="dateInput">
+                        <br>
+                        <h3>How Many Guests</h3>
+                        <textarea name="" class="form-control" id="textarea" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" id="add" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    
+        <h5 class="text-center my-3" style="color:rgb(255, 255, 255);">Guests</h5>
+    
+        <div id="guests" style="color:rgb(255, 255, 255);">
+    
+        </div>
+    </div>
+    
+</body>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="week12.js"></script>
+</html>
